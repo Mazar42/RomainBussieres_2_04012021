@@ -1,27 +1,57 @@
+/* apply font Raleway */
 @font-face {
     font-family: "Raleway";
     src: url("Raleway-Regular.ttf") format("truetype");
 }
 
+*
+{
+    font-family: "Raleway";
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+/*//Define block//*/
+
+#blocpage
+{
+    max-width: 900px;
+    margin: auto;
+}
+
+/* /////Define header style////// */
+
 header{
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    font-family: "Raleway";
 }
 .logo{
     max-width: 100px;
 }
 
+/* Define Nav Menu */
+
+nav
+{
+    display: flex;
+}
+
+nav p
+{
+    margin-left: 70px;
+}
 nav ul
 {
     list-style-type: none;
     display: flex;
+    justify-content: flex-end;
 }
 
 nav li
 {
-    margin-right: 70px;
+    margin-left: 70px;
 }
 
 nav a
@@ -33,20 +63,112 @@ nav a
 
 nav a:hover
 {
-    color: #0065FC;
     border-top: #0065FC solid;
     padding-top: 25px;
 }
-strong{
-    color: blue;
-}
-body{
-    font-family: "Raleway";
+nav strong{
+    color: #0065FC;
 }
 
+
+/*/////search area/////*/
+ 
+
+/*////result display area////*/
+
+.search_result
+{
+    display: flex;
+    justify-content: space-between;
+    max-height: 630px;
+}
+
+.result_main
+{
+    display: flex;
+    flex-direction: column;
+    max-width: 880px;
+    padding: 40px ;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+}
+
+.resultcontainer
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/*Result boxes*/
+
+.result 
+{
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 5px 5px 5px;
+    max-width: 245px;
+    height: 195px;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.342);
+}
+
+.result:hover
+{
+    border: #0065fc71 solid ;
+}
+
+.result h4
+{
+    padding-left: 12px;
+    margin-top: 4px;
+    padding-top: 0px;
+    margin-bottom: 5px;
+}
+
+.result p
+{
+    padding-left: 12px;
+    padding-bottom: 3px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.result .stars 
+{
+    padding-left: 12px;
+    padding-top: ;
+    color: #0065FC;
+}
+
+.result .stars .greystar
+{
+    color: #F2F2F2;
+}
+
+.result_pic
+{
+    width: auto;
+    height: 115px;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
 .grey {
     background-color: #F2F2F2;
 }
+
+
+
+/*result images*/
+
+.cannebiere
+{
+    background-image: url(images/hebergements/4_small/Hotelcann.jpg);
+}
+
+/*//footer area//*/
 
 footer{
     display: flex;
@@ -70,3 +192,12 @@ footer a:hover
     justify-content: space-between;
 }
 
+/* Smallscreen rules*/
+@media all and (max-width: 1024px)
+{
+    #blocpage
+    {
+        width: auto;
+    }
+    
+}
