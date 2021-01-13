@@ -13,12 +13,16 @@ a{
     text-decoration: none;
     color: black;
 }
+
+.grey {
+    background-color: #F2F2F2;
+}
 /*//Define block//*/
 
 #blocpage
 {
-    max-width: 900px;
-    margin: auto;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 /* /////Define header style////// */
@@ -76,6 +80,8 @@ nav strong{
 
 /*////result display area////*/
 
+/*//proper result//*/
+
 .search_result
 {
     display: flex;
@@ -87,10 +93,12 @@ nav strong{
 {
     display: flex;
     flex-direction: column;
-    max-width: 880px;
-    padding: 40px ;
-    background-color: #F2F2F2;
+    width: 880px;
+    padding: 20px ;
+    padding-right: 15px;
     border-radius: 10px;
+    margin-right: 40px;
+
 }
 
 .resultcontainer
@@ -98,24 +106,38 @@ nav strong{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    max-height: 500px;
 }
 
 /*Result boxes*/
+
+.infologo{
+    height: 20px;
+    width: 20px;
+    color: #0065FC;
+    background-color: white;
+    border: solid #F2F2F2;
+    padding: 1px 8px 1px 8px;
+    border-radius: 100px;
+    margin-right: 12px;
+}
 
 .result 
 {
     background-color: white;
     border-radius: 10px;
     padding: 5px 5px 5px 5px;
-    max-width: 245px;
+    margin-bottom: 30px;
+    width: 245px;
     height: 195px;
-    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.342);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.342);    
 }
+
 
 .result:hover
 {
-    border: #0065fc71 solid ;
+    border: #0065fc5e solid ;
 }
 
 .result h4
@@ -155,25 +177,136 @@ nav strong{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.grey {
-    background-color: #F2F2F2;
+
+.linkmore:hover
+{
+    color: #0065FC;
 }
 
+/*//aside part//*/
 
+.popularcontainer
+{
+    border-radius: 10px;
+    padding-top: 40px;
+}
 
-/*result images*/
+.resultcontainerpop
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    max-height: 500px;
+    padding-top: 20px;
+}
+
+.resultpop
+{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.247);
+    display: flex;
+    width: 334px;
+    height: 134px;
+    padding: 5px;
+    margin-bottom: 30px; 
+}
+
+.resultpop:hover
+{
+    border: #0065fc5e solid ;
+}
+
+.resultpop .stars 
+{
+    padding-left: 12px;
+    padding-top: ;
+    color: #0065FC;
+}
+
+.resultpop p
+{
+    padding-left: 12px;
+    padding-bottom: 3px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.resultpop h4
+{
+    padding-left: 12px;
+    margin-top: 4px;
+    padding-top: 0px;
+    margin-bottom: 5px;
+}
+
+.result_pic_pop
+{
+    width: 125px;
+    height: 135px;
+    background-size: cover;
+    background-position: center;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.resultpop .stars .greystar
+{
+    color: #F2F2F2;
+}
+/*all result images*/
 
 .cannebiere
 {
     background-image: url(images/hebergements/4_small/Hotelcann.jpg);
 }
 
+.Lamer 
+{
+    background-image: url(images/hebergements/4_small/Lamer.jpg);
+}
+
+.Hotelport
+{
+    background-image: url(images/hebergements/4_small/Hotelport.jpg);
+}
+
+.LePanier
+{
+    background-image: url(images/hebergements/4_small/LePanier.jpg);
+}
+
+.Hotelmouette
+{
+    background-image: url(images/hebergements/4_small/Hotelmouette.jpg);
+}
+
+.Amina
+{
+    background-image: url(images/hebergements/4_small/Amina.jpg);
+}
+
+.Hotelesoleil
+{
+    background-image: url(images/hebergements/4_small/soleil.jpg);
+}
+
+.coeurdelo
+{
+    background-image: url(images/hebergements/4_small/eau.jpg);
+}
+
+.bleublanc
+{
+    background-image: url(images/hebergements/4_small/bleublanc.jpg);
+}
 /*//footer area//*/
 
 footer{
     display: flex;
     justify-content: space-between;
-    margin: 0px
+    margin: 0 auto;
 }
 
 footer a
