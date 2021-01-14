@@ -76,7 +76,31 @@ nav strong{
 
 
 /*/////search area/////*/
- 
+.submit_button
+{
+    color: white;
+    background-color: #0065FC;
+}
+
+.search_logo
+{
+    background-color: #F2F2F2;
+}
+.search_field_box
+{
+    max-width: 418px;
+    border-style: solid;
+    border-color: #F2F2F2;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.filter_box
+{
+    display: flex;
+    max-width: 928px;
+    justify-content: space-between;
+}
 
 /*////result display area////*/
 
@@ -185,6 +209,10 @@ nav strong{
 
 /*//aside part//*/
 
+.iconepop
+{
+    margin-left: 100px;
+}
 .popularcontainer
 {
     border-radius: 10px;
@@ -255,6 +283,50 @@ nav strong{
 {
     color: #F2F2F2;
 }
+
+/*///Activities///*/
+
+.activities
+{
+    margin-bottom: 62px;
+}
+
+.activities_box
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-between;
+    height: 500px;
+}
+
+.activities_result
+{
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.342);
+    width: 280px;
+    padding-bottom: 1px;
+}
+
+.actipic
+{
+    background: cover;
+    width: 280px;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.atcivity_result_link:hover
+{
+    border: #0065fc5e ridge;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+
 /*all result images*/
 
 .cannebiere
@@ -300,6 +372,37 @@ nav strong{
 .bleublanc
 {
     background-image: url(images/hebergements/4_small/bleublanc.jpg);
+}
+
+.Port
+{
+    background-image: url(images/activites/4_small/Port.jpg);
+    height: 390px;
+}
+.Pomegues
+{
+    background-image: url(images/activites/4_small/Pomègues.jpg);
+    height: 186px
+}
+.Frioul
+{
+    background-image: url(images/activites/4_small/Frioul.jpg);
+    height: 110px;
+}
+.Calanques
+{
+    background-image: url(images/activites/4_small/Calanques.jpg);
+    height: 390px;
+}
+.Lagarde
+{
+    background-image: url(images/activites/4_small/Lagarde.jpg);
+    height: 140px;
+}
+.Longchamp
+{
+    background-image: url(images/activites/4_small/Longchamp.jpg);
+    height: 150px;
 }
 /*//footer area//*/
 
