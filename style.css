@@ -76,22 +76,43 @@ nav strong{
 
 
 /*/////search area/////*/
+
+.search_field_box{
+    display: flex;
+}
+
+.search_field_box input[type="text"]
+{
+    padding: 13px;
+    width: 235px;
+    border-color: #F2F2F2;
+    border-style: solid;
+    font-weight: bolder;
+    font-size: 1em;
+}
 .submit_button
 {
     color: white;
     background-color: #0065FC;
+    padding: 15px;
+    margin-left: none;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    border-style: none;
+    width: 135px;
+    font-weight: bold;
+    font-size: 1em;
 }
 
 .search_logo
 {
     background-color: #F2F2F2;
+    padding:15px;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
 }
 .search_field_box
 {
-    max-width: 418px;
-    border-style: solid;
-    border-color: #F2F2F2;
-    border-radius: 10px;
     margin-bottom: 20px;
 }
 
@@ -101,6 +122,54 @@ nav strong{
     max-width: 928px;
     justify-content: space-between;
 }
+
+.filter_box strong
+{
+    padding: 15px;
+}
+.filter_box i
+{
+    padding: 15px;
+    border-radius: 50px;
+}
+
+.filter_box label
+{
+    border-style: solid;
+    border-color: #F2F2F2;
+    border-radius: 50px;
+    padding-right: 20px;
+}
+
+.filter_box b
+{
+    padding-left: 10px;
+}
+
+.custom_box input[type="checkbox"],
+.custom_box .checked{
+    display: none;
+}
+
+.custom_box input[type="checkbox"]:checked~.checked{
+    display: inline-block;
+}
+
+.custom_box input[type="checkbox"]:checked~.unchecked {
+        display: none;
+}
+
+.unchecked
+{
+    color: #0065FC;
+    background-color: #DEEBFF;
+}
+
+.checked{
+    color: white;
+    background-color: #0065FC; ;
+}
+
 
 /*////result display area////*/
 
@@ -131,7 +200,7 @@ nav strong{
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    max-height: 500px;
+    height: 500px;
 }
 
 /*Result boxes*/

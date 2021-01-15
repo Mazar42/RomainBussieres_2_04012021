@@ -32,14 +32,36 @@
                 <form method="POST" action="traitement.php">
                     <p>
                         <div class="search_field_box">
-                            <i class="fas fa-map-marker-alt search_logo"></i><input type="text" name="Search" id="Search" value="Marseille, France"/><input type="submit" value="Envoyer" class="submit_button" />
+                            <i class="fas fa-map-marker-alt search_logo"></i>
+                            <input type="text" name="Search" id="Search" value="Marseille, France"/>
+                            <input type="submit" value="Rechercher" class="submit_button" />
                         </div>
                         <div class="filter_box">
                             <strong>Filtres</strong>
-                            <label for="Economique"></label><input type="checkbox" name="Economique" id="Economique"/><b>Economique</b></label>
-                            <label for="Familial"></label><input type="checkbox" name="Familial" id="Familial"/> <b>Familial</b></label>
-                            <label for="Romantique"></label><input type="checkbox" name="Romantique" id="Romantique"/> <b>Romantique</b></label>
-                            <label for="Animaux_Autorises"></label><input type="checkbox" name="Animaux_Autorises" id="Animaux_Autorises"/> <b>Animaux Autorisés</b></label>
+                            <label for="Economique" class="custom_box">
+                                <input type="checkbox" name="Economique" id="Economique"/>
+                                <i class="fas fa-money-bill-wave checked"></i>
+                                <i class="fas fa-money-bill-wave unchecked"></i>
+                                <b>Economique</b>
+                                </label>
+                            <label for="Familial" class="custom_box">
+                                <input type="checkbox" name="Familial" id="Familial"/> 
+                                <i class="fas fa-child checked"></i>
+                                <i class="fas fa-child unchecked"></i>
+                                <b>Familial</b>
+                            </label>
+                            <label for="Romantique" class="custom_box">
+                                <input type="checkbox" name="Romantique" id="Romantique"/>
+                                <i class="fas fa-heart checked"></i>
+                                <i class="fas fa-heart unchecked"></i> 
+                                <b>Romantique</b>
+                            </label>
+                            <label for="Animaux_Autorises" class="custom_box">
+                                <input type="checkbox" name="Animaux_Autorises" id="Animaux_Autorises"/>
+                                <i class="fas fa-dog checked"></i>
+                                <i class="fas fa-dog unchecked"></i>
+                                <b>Animaux Autorisés</b>
+                            </label>
                         </div>
                     </p>
                 </form>
