@@ -173,7 +173,7 @@ nav strong{
 
 /*////result display area////*/
 
-/*//proper result//*/
+/*//housing result//*/
 
 .search_result
 {
@@ -191,7 +191,7 @@ nav strong{
     padding-right: 15px;
     border-radius: 10px;
     margin-right: 40px;
-
+    flex-basis: content;
 }
 
 .resultcontainer
@@ -200,7 +200,7 @@ nav strong{
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    height: 500px;
+    max-height: 500px;
 }
 
 /*Result boxes*/
@@ -230,7 +230,7 @@ nav strong{
 
 .result:hover
 {
-    border: #0065fc5e solid ;
+    color:#0065FC;
 }
 
 .result h4
@@ -276,7 +276,7 @@ nav strong{
     color: #0065FC;
 }
 
-/*//aside part//*/
+/*//aside part (popular result)//*/
 
 .iconepop
 {
@@ -312,7 +312,7 @@ nav strong{
 
 .resultpop:hover
 {
-    border: #0065fc5e solid ;
+    color:#0065FC;
 }
 
 .resultpop .stars 
@@ -378,6 +378,11 @@ nav strong{
     padding-bottom: 1px;
 }
 
+.activities_result h4
+{
+    padding-left: 10px;
+}
+
 .actipic
 {
     background: cover;
@@ -390,8 +395,7 @@ nav strong{
 
 .atcivity_result_link:hover
 {
-    border: #0065fc5e ridge;
-    border-radius: 10px;
+    color: #0065FC;
     box-shadow: none;
 }
 
@@ -497,12 +501,124 @@ footer a:hover
     justify-content: space-between;
 }
 
-/* Smallscreen rules*/
-@media all and (max-width: 1024px)
+/* //// Smallscreens rules ////*/
+
+@media all and (max-width: 1220px)
 {
-    #blocpage
-    {
+    /*header*/
+    
+    header{
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .logo{
+        max-height: 52px;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column-reverse;
         width: auto;
+        justify-content: flex-start;
+    }  
+
+    nav ul a{
+        padding-left: none;
+    }
+
+    nav ul{
+        padding-bottom: 20px;
+        border-bottom: #F2F2F2 solid;
+    }
+    nav a:hover{
+        padding-bottom: 20px;
+        border-bottom: #0065FC solid;
+        border-top: none;
+        }
+    
+        header p{
+            padding-right: 30px;
+            align-self: flex-end;
+        }
+
+    /*search area*/
+    
+    .filter_box{
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
+
+    /*search result area*/
+
+    .search_result{
+        flex-direction: column-reverse;
+        max-height: none;
     }
     
+    .result_main{
+        width: auto;
+        background-color: white;
+        margin: auto;
+    }
+
+    .resultcontainer
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-height: none;
+    }
+
+    /*popular*/
+
+    aside h2
+    {
+        margin-left: auto;
+    }
+
+    .resultcontainerpop{
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: auto;
+    }
+
+    /*activities*/
+
+    .activities h2
+    {
+        padding-left: 20px;
+    }
+
+    .activities_box
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: space-evenly;
+        align-content: space-between;
+
+    }
+    
+    .actipic{
+        width:280px;
+        height: 140px;
+    }
+
+    .activities_result h4 
+    {
+        padding-left: 10px;
+    }
+
+    .activities_result
+    {
+        margin-top: 20px;
+    }
 }
+
+/*mini responsive*/
+
+ /*@media all and (min-width: 840px) and (max-width : 1220px){
+ }*/
+
