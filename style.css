@@ -17,6 +17,12 @@ a{
 .grey {
     background-color: #F2F2F2;
 }
+
+ul
+{
+    list-style-type: none;
+}
+
 /*//Define block//*/
 
 #blocpage
@@ -28,11 +34,15 @@ a{
 /* /////Define header style////// */
 
 header{
-    display: flex;
+    display: grid;
     justify-content: space-between;
+    grid-auto-columns: 7fr 2fr 1fr;
+    grid-template-areas: 
+    " logo nav subscribe";
 }
 .logo{
     max-width: 100px;
+    grid-area: logo;
 }
 
 /* Define Nav Menu */
@@ -40,6 +50,7 @@ header{
 nav
 {
     display: flex;
+    grid-area: nav;
 }
 
 nav p
@@ -68,9 +79,20 @@ nav a
 nav a:hover
 {
     border-top: #0065FC solid;
-    padding-top: 25px;
+    padding-top: 20px;
+} 
+
+header p 
+{
+    grid-area: subscribe;
+    padding-left: 80px;
 }
-nav strong{
+header p a:hover
+{
+    border-top: #0065FC solid;
+    padding-top: 20px;
+}
+header p strong{
     color: #0065FC;
 }
 
@@ -116,6 +138,10 @@ nav strong{
     margin-bottom: 20px;
 }
 
+.search-icon{
+    display: none;
+}
+
 .filter_box
 {
     display: flex;
@@ -126,6 +152,7 @@ nav strong{
 .filter_box strong
 {
     padding: 15px;
+    grid-area: filtres;
 }
 .filter_box i
 {
@@ -146,16 +173,16 @@ nav strong{
     padding-left: 10px;
 }
 
-.custom_box input[type="checkbox"],
-.custom_box .checked{
+.custom-box input[type="checkbox"],
+.custom-box .checked{
     display: none;
 }
 
-.custom_box input[type="checkbox"]:checked~.checked{
+.custom-box input[type="checkbox"]:checked~.checked{
     display: inline-block;
 }
 
-.custom_box input[type="checkbox"]:checked~.unchecked {
+.custom-box input[type="checkbox"]:checked~.unchecked {
         display: none;
 }
 
@@ -175,11 +202,12 @@ nav strong{
 
 /*//housing result//*/
 
-.search_result
+.search-result
 {
     display: flex;
     justify-content: space-between;
     max-height: 630px;
+    margin-bottom: 70px;
 }
 
 .result_main
@@ -192,15 +220,18 @@ nav strong{
     border-radius: 10px;
     margin-right: 40px;
     flex-basis: content;
+    height: 625px;
 }
 
 .resultcontainer
 {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     max-height: 500px;
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    column-gap: 30px;
 }
 
 /*Result boxes*/
@@ -215,18 +246,32 @@ nav strong{
     border-radius: 100px;
     margin-right: 12px;
 }
+ .imgresult
+ {
+     overflow: hidden;
+     height: 110px;
+     border-top-left-radius: 20px;
+     border-top-right-radius: 20px;
+     position: relative;
+ }
 
+ .imgresult img
+ {
+    max-width: 100%;
+    max-height: auto;
+    position: absolute; bottom: -25px; left: 0;
+ }
 .result 
 {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 5px 5px 5px 5px;
     margin-bottom: 30px;
     width: 245px;
     height: 195px;
-    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.342);    
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.342);  
+    margin: 10px auto;  
 }
-
 
 .result:hover
 {
@@ -252,7 +297,7 @@ nav strong{
 .result .stars 
 {
     padding-left: 12px;
-    padding-top: ;
+    margin-top: 31px;
     color: #0065FC;
 }
 
@@ -271,6 +316,10 @@ nav strong{
     border-top-right-radius: 10px;
 }
 
+.linkmore
+{
+    padding-left: 35px;
+}
 .linkmore:hover
 {
     color: #0065FC;
@@ -282,10 +331,19 @@ nav strong{
 {
     margin-left: 100px;
 }
+
 .popularcontainer
 {
     border-radius: 10px;
     padding-top: 40px;
+    width: 420px;
+    height: 625px;
+    padding-right: 30px;
+}
+
+.popularcontainer h2
+{
+    padding-left: 30px;
 }
 
 .resultcontainerpop
@@ -293,21 +351,54 @@ nav strong{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
-    max-height: 500px;
-    padding-top: 20px;
+    max-height: auto;
 }
 
 .resultpop
 {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.247);
     display: flex;
-    width: 334px;
-    height: 134px;
-    padding: 5px;
-    margin-bottom: 30px; 
+    width: 343px;
+    height: 144px;
+    padding: 5px; 
+    margin: 10px auto;
+}
+
+.imgpop
+
+{
+    overflow: hidden;
+    width: 128px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    position: relative;
+}
+
+.imgpop img
+{
+    max-width: 170%;
+    max-height: auto;
+    position: absolute; bottom: 2px; right: -30px;
+}
+
+.imgpopportrait
+
+{
+    overflow: hidden;
+    width: 128px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.imgpopportrait img
+{
+    max-width: 100%;
+    max-height: auto;
+    position: absolute; bottom: -30px; right: 0px;
 }
 
 .resultpop:hover
@@ -315,10 +406,10 @@ nav strong{
     color:#0065FC;
 }
 
+
 .resultpop .stars 
 {
     padding-left: 12px;
-    padding-top: ;
     color: #0065FC;
 }
 
@@ -338,16 +429,6 @@ nav strong{
     margin-bottom: 5px;
 }
 
-.result_pic_pop
-{
-    width: 125px;
-    height: 135px;
-    background-size: cover;
-    background-position: center;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-}
-
 .resultpop .stars .greystar
 {
     color: #F2F2F2;
@@ -360,22 +441,68 @@ nav strong{
     margin-bottom: 62px;
 }
 
-.activities_box
+.activities-box
 {
-    display: flex;
+    display: grid;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: space-between;
-    height: 500px;
+    height: 470px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "port pomegues calanques lagarde"
+    "port frioul calanques longchamps";
+    padding-left: 0px;
+}
+
+.port
+{
+    grid-area: port;
+}
+
+.pomegues
+{
+    grid-area: pomegues;
+}
+
+.frioul 
+{
+    grid-area: frioul;
+}
+.calanques 
+{
+    grid-area: calanques;
+}
+
+.lagarde 
+{
+    grid-area: lagarde;
+}
+
+.longchamps 
+{
+    grid-area: longchamps;
 }
 
 .activities_result
 {
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.342);
     width: 280px;
     padding-bottom: 1px;
+    margin: 0;
+}
+
+.frioul
+{
+    margin-top: 19px;
+}
+
+.longchamps
+{
+    margin-top: -5px;
 }
 
 .activities_result h4
@@ -385,106 +512,54 @@ nav strong{
 
 .actipic
 {
-    background: cover;
-    width: 280px;
-    background-position: center;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    text-align: center;
+    position: relative;
 
 }
 
-.atcivity_result_link:hover
+.pomactipic
+{
+    height: 180px;
+}
+.frioulactipic
+{
+    height: 110px;
+}
+.lagardeactipic
+{
+    height: 140px;
+}
+.longactipic
+{
+    height: 150px;
+}
+.bigactipic
+{
+    height: 390px;
+}
+
+.result_link:hover
 {
     color: #0065FC;
     box-shadow: none;
 }
 
-
-/*all result images*/
-
-.cannebiere
-{
-    background-image: url(images/hebergements/4_small/Hotelcann.jpg);
-}
-
-.Lamer 
-{
-    background-image: url(images/hebergements/4_small/Lamer.jpg);
-}
-
-.Hotelport
-{
-    background-image: url(images/hebergements/4_small/Hotelport.jpg);
-}
-
-.LePanier
-{
-    background-image: url(images/hebergements/4_small/LePanier.jpg);
-}
-
-.Hotelmouette
-{
-    background-image: url(images/hebergements/4_small/Hotelmouette.jpg);
-}
-
-.Amina
-{
-    background-image: url(images/hebergements/4_small/Amina.jpg);
-}
-
-.Hotelesoleil
-{
-    background-image: url(images/hebergements/4_small/soleil.jpg);
-}
-
-.coeurdelo
-{
-    background-image: url(images/hebergements/4_small/eau.jpg);
-}
-
-.bleublanc
-{
-    background-image: url(images/hebergements/4_small/bleublanc.jpg);
-}
-
-.Port
-{
-    background-image: url(images/activites/4_small/Port.jpg);
-    height: 390px;
-}
-.Pomegues
-{
-    background-image: url(images/activites/4_small/Pomègues.jpg);
-    height: 186px
-}
-.Frioul
-{
-    background-image: url(images/activites/4_small/Frioul.jpg);
-    height: 110px;
-}
-.Calanques
-{
-    background-image: url(images/activites/4_small/Calanques.jpg);
-    height: 390px;
-}
-.Lagarde
-{
-    background-image: url(images/activites/4_small/Lagarde.jpg);
-    height: 140px;
-}
-.Longchamp
-{
-    background-image: url(images/activites/4_small/Longchamp.jpg);
-    height: 150px;
-}
 /*//footer area//*/
 
 footer{
-    display: flex;
-    justify-content: space-between;
+    width: 1440px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     margin: 0 auto;
 }
-
+footer div
+{
+    padding-left: 20px;
+}
 footer a
 {
     display: flex;
@@ -496,11 +571,6 @@ footer a:hover
     color: #0065FC;
 }
 
-.container{
-    display: flex;
-    justify-content: space-between;
-}
-
 /* //// Smallscreens rules ////*/
 
 @media all and (max-width: 1220px)
@@ -508,51 +578,86 @@ footer a:hover
     /*header*/
     
     header{
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "logo subscribe"
+        "nav nav";
     }
 
-    .logo{
-        max-height: 52px;
+    header p
+    {
+        justify-self: right;
     }
 
-    nav{
+    nav
+    {
         display: flex;
-        flex-direction: column-reverse;
-        width: auto;
-        justify-content: flex-start;
-    }  
-
-    nav ul a{
-        padding-left: none;
+        border-bottom: solid #F2F2F2;
     }
 
-    nav ul{
-        padding-bottom: 20px;
-        border-bottom: #F2F2F2 solid;
+    nav ul 
+    {
+        margin: 0;
+        display: flex;
+        width: 100%;    
+        padding: 0;
     }
-    nav a:hover{
-        padding-bottom: 20px;
-        border-bottom: #0065FC solid;
+
+    nav ul li { 
+        width: 50%;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li a { 
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        position: relative;
+    }
+
+    nav a:hover
+    {
         border-top: none;
-        }
+        padding-top: 0;
+    }
+    nav a:hover::after
+    {
+        content: "";
+        display: inline-block;
+        height: 2.5px;
+        width: 100%;
+        background-color: #0065FC;
+        position: absolute;
+        top: 47px;
+        left: 0;
+    }
+
     
-        header p{
-            padding-right: 30px;
-            align-self: flex-end;
-        }
 
     /*search area*/
     
     .filter_box{
+        display: grid;
         flex-wrap: wrap;
         align-content: space-around;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "filtres filtres";
+    }
+
+    .filter_box label
+    {
+        margin-bottom: 10px;
+        width: fit-content;
     }
 
     /*search result area*/
 
-    .search_result{
+    .search-result{
         flex-direction: column-reverse;
         max-height: none;
     }
@@ -561,49 +666,66 @@ footer a:hover
         width: auto;
         background-color: white;
         margin: auto;
+        
     }
-
     .resultcontainer
     {
+        display: grid;
         flex-direction: row;
         flex-wrap: wrap;
         max-height: none;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 40px ;
+    }
+
+    .result
+    {
+        width: 343px;
     }
 
     /*popular*/
 
-    aside h2
+    aside h2 
     {
         margin-left: auto;
     }
 
+    aside ul
+    {
+        display: flex;
+    }
+
     .resultcontainerpop{
-        flex-direction: row;
-        flex-wrap: wrap;
         width: auto;
     }
 
+    .popularcontainer{
+        align-self: center;
+        
+    }
+
     /*activities*/
+
+    .activities
+    {
+        margin-top: 250px;
+    }
+    
+    .activities-box
+    {
+        display: flex;
+    }
 
     .activities h2
     {
         padding-left: 20px;
     }
 
-    .activities_box
-    {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        height: auto;
-        justify-content: space-evenly;
-        align-content: space-between;
-
-    }
     
-    .actipic{
-        width:280px;
-        height: 140px;
+    .actipic
+    {
+        width:100%;
+        height:135px;
     }
 
     .activities_result h4 
@@ -614,11 +736,99 @@ footer a:hover
     .activities_result
     {
         margin-top: 20px;
+        width: 343px;
+    }
+
+    /*Footer*/
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding-left: 20px;
+    }
+
+    footer div 
+    {
+        margin-bottom: 20px;
     }
 }
 
 /*mini responsive*/
 
- /*@media all and (min-width: 840px) and (max-width : 1220px){
- }*/
+@media all and (max-width : 850px)
+{
 
+    .search-result{
+        display: flex;
+        flex-direction: column-reverse;
+        max-height: none;
+    }
+
+    .result_main{
+        width: auto;
+        background-color: white;
+        margin: auto;
+    }
+
+    .resultcontainer
+    {
+        display: flex;
+        flex-wrap: wrap;
+        max-height: none;
+    }
+
+    .linkmore
+    {
+        padding-left: 180px;
+    }
+
+    /*search field mini*/
+
+    .submit_button
+    {
+        display: none;
+    }
+    .search-icon {
+        display: flex;
+        color: white;
+        width: 50px;
+        height: 50px;
+        background: #0065FC;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px ;
+        margin: 0;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*filter box mini*/
+
+    .filter_box{
+        display: grid;
+        flex-wrap: wrap;
+        align-content: space-around;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "filtres filtres";
+    }
+
+    /*Activities mini*/
+
+    .activities
+    {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 950px;
+        width: 360px;
+    }
+
+    .activities-box
+    {
+        display: flex;
+        flex-wrap: wrap;
+        max-height: none;
+        width: 355px
+}
