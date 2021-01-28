@@ -491,6 +491,7 @@ header p strong{
     "port pomegues calanques lagarde"
     "port frioul calanques longchamps";
     padding-left: 0px;
+    column-gap: 27px;
 }
 
 .port
@@ -526,7 +527,7 @@ header p strong{
 {
     border-radius: 20px;
     box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.247);
-    width: 280px;
+    width: 330px;
     padding-bottom: 1px;
     margin: 0;
 }
@@ -538,7 +539,7 @@ header p strong{
 
 .longchamps
 {
-    margin-top: -5px;
+    margin-top: -2px;
 }
 
 .activities-result h4
@@ -563,23 +564,23 @@ header p strong{
 }
 .pomactipic
 {
-    height: 180px;
+    height: 200px;
 }
 .frioulactipic
 {
-    height: 110px;
+    height: 130px;
 }
 .lagardeactipic
 {
-    height: 140px;
+    height: 160px;
 }
 .longactipic
 {
-    height: 150px;
+    height: 170px;
 }
 .bigactipic
 {
-    height: 390px;
+    height: 430px;
 }
 
 .result-link:hover
@@ -721,9 +722,6 @@ footer a:hover
     .resultcontainer
     {
         display: grid;
-        flex-direction: row;
-        flex-wrap: wrap;
-        max-height: none;
         grid-template-columns: 1fr 1fr;
         column-gap: 40px ;
     }
@@ -773,6 +771,7 @@ footer a:hover
         "pomegues lagarde"
         "frioul longchamps";
         padding-left: 40px;
+        justify-content: space-between;
     }
 
     .longchamps
