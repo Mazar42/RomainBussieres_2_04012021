@@ -23,6 +23,19 @@ ul
     list-style-type: none;
 }
 
+h4
+{
+    font-weight:bolder;
+}
+
+h2{
+    font-weight: bolder;
+}
+
+h1{
+    font-weight: bolder;
+}
+
 /*//Define block//*/
 
 #blocpage
@@ -197,6 +210,26 @@ header p strong{
     background-color: #0065FC; ;
 }
 
+.eco
+{
+    grid-area: eco;
+}
+
+.familial
+{
+    grid-area: familial;
+}
+
+.romantique
+{
+    grid-area: romantique;
+}
+
+.animaux
+
+{
+    grid-area: animaux;
+}
 
 /*////result display area////*/
 
@@ -252,14 +285,13 @@ header p strong{
      height: 110px;
      border-top-left-radius: 20px;
      border-top-right-radius: 20px;
-     position: relative;
  }
 
  .imgresult img
  {
-    max-width: 100%;
-    max-height: auto;
-    position: absolute; bottom: -25px; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
  }
 .result 
 {
@@ -378,9 +410,9 @@ header p strong{
 
 .imgpop img
 {
-    max-width: 170%;
-    max-height: auto;
-    position: absolute; bottom: 2px; right: -30px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 .imgpopportrait
@@ -391,14 +423,13 @@ header p strong{
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
     text-align: center;
-    position: relative;
 }
 
 .imgpopportrait img
 {
-    max-width: 100%;
-    max-height: auto;
-    position: absolute; bottom: -30px; right: 0px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 .resultpop:hover
@@ -513,10 +544,14 @@ header p strong{
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     text-align: center;
-    position: relative;
-
 }
 
+.actipic img
+{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
 .pomactipic
 {
     height: 180px;
@@ -645,7 +680,9 @@ footer a:hover
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: 
-        "filtres filtres";
+        "filtres filtres"
+        "eco familial"
+        "romantique animaux";
     }
 
     .filter_box label
@@ -780,6 +817,11 @@ footer a:hover
 
 @media all and (max-width : 850px)
 {
+    #accroche
+    {
+        width: 350px;
+        padding-left: 60px;
+    }
     /*result field mini*/
 
     .search-result{
@@ -806,9 +848,14 @@ footer a:hover
 
     .linkmore{
         padding-left: 105px;
+        margin-top: -25px;
     }
     /*search field mini*/
 
+    form 
+    {
+        padding-left: 60px;
+    }
     .submit_button
     {
         display: none;
@@ -834,9 +881,19 @@ footer a:hover
         flex-wrap: wrap;
         align-content: space-around;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas: 
-        "filtres filtres";
+        "filtres filtres"
+        "eco familial"
+        "romantique romantique"
+        "animaux animaux";
+    }
+
+    /*popular mini*/
+
+    .popularcontainer
+    {
+        margin-top: 40px;
     }
 
     /*Activities mini*/
@@ -847,8 +904,8 @@ footer a:hover
         justify-self: center;
         flex-direction: column;
         width: auto;
-        margin-top: 950px;
-        margin-bottom: 900px;
+        margin-top: 880px;
+        margin-bottom: 880px;
         margin-left: 10%;
     }
 
@@ -864,10 +921,10 @@ footer a:hover
         grid-template-rows: repeat(6, 1fr);
         grid-template-areas: 
         "port"
-        "calanques"
         "pomegues"
-        "lagarde"
         "frioul"
+        "calanques"
+        "lagarde"
         "longchamps";
     }
 }
