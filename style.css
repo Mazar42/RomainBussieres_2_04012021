@@ -112,11 +112,11 @@ header p strong{
 
 /*/////search area/////*/
 
-.search_field_box{
+.search-field-box{
     display: flex;
 }
 
-.search_field_box input[type="text"]
+.search-field-box input[type="text"]
 {
     padding: 13px;
     width: 235px;
@@ -125,7 +125,7 @@ header p strong{
     font-weight: bolder;
     font-size: 1em;
 }
-.submit_button
+.submit-button
 {
     color: white;
     background-color: #0065FC;
@@ -139,14 +139,14 @@ header p strong{
     font-size: 1em;
 }
 
-.search_logo
+.search-logo
 {
     background-color: #F2F2F2;
     padding:15px;
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
 }
-.search_field_box
+.search-field-box
 {
     margin-bottom: 20px;
 }
@@ -155,25 +155,25 @@ header p strong{
     display: none;
 }
 
-.filter_box
+.filter-box
 {
     display: flex;
     max-width: 928px;
     justify-content: space-between;
 }
 
-.filter_box strong
+.filter-box strong
 {
     padding: 15px;
     grid-area: filtres;
 }
-.filter_box i
+.filter-box i
 {
     padding: 15px;
     border-radius: 50px;
 }
 
-.filter_box label
+.filter-box label
 {
     border-style: solid;
     border-color: #F2F2F2;
@@ -181,7 +181,7 @@ header p strong{
     padding-right: 20px;
 }
 
-.filter_box b
+.filter-box b
 {
     padding-left: 10px;
 }
@@ -243,7 +243,7 @@ header p strong{
     margin-bottom: 70px;
 }
 
-.result_main
+.result-main
 {
     display: flex;
     flex-direction: column;
@@ -301,7 +301,7 @@ header p strong{
     margin-bottom: 30px;
     width: 245px;
     height: 195px;
-    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.342);  
+    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.247);  
     margin: 10px auto;  
 }
 
@@ -338,7 +338,7 @@ header p strong{
     color: #F2F2F2;
 }
 
-.result_pic
+.result-pic
 {
     width: auto;
     height: 115px;
@@ -375,7 +375,7 @@ header p strong{
 
 .popularcontainer h2
 {
-    padding-left: 30px;
+    text-align: center;
 }
 
 .resultcontainerpop
@@ -470,6 +470,7 @@ header p strong{
 .activities
 {
     margin-bottom: 62px;
+    justify-self: center;
 }
 
 .activities-box
@@ -513,10 +514,10 @@ header p strong{
     grid-area: longchamps;
 }
 
-.activities_result
+.activities-result
 {
     border-radius: 20px;
-    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.342);
+    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.247);
     width: 280px;
     padding-bottom: 1px;
     margin: 0;
@@ -532,7 +533,7 @@ header p strong{
     margin-top: -5px;
 }
 
-.activities_result h4
+.activities-result h4
 {
     padding-left: 10px;
 }
@@ -573,7 +574,7 @@ header p strong{
     height: 390px;
 }
 
-.result_link:hover
+.result-link:hover
 {
     color: #0065FC;
     box-shadow: none;
@@ -673,7 +674,7 @@ footer a:hover
 
     /*search area*/
     
-    .filter_box{
+    .filter-box{
         display: grid;
         flex-wrap: wrap;
         align-content: space-around;
@@ -685,7 +686,7 @@ footer a:hover
         "romantique animaux";
     }
 
-    .filter_box label
+    .filter-box label
     {
         margin-bottom: 10px;
         width: fit-content;
@@ -698,14 +699,14 @@ footer a:hover
         max-height: none;
     }
     
-    .result_main{
+    .result-main{
         width: auto;
         background-color: white;
         margin: auto;
         
     }
 
-    .result_main h2
+    .result-main h2
     {
         padding-left: 20px;
     }
@@ -751,7 +752,7 @@ footer a:hover
     {
         margin-top: 250px;
         margin-bottom: 250px;
-        padding-left: 25px;
+        padding-left: 30px;
     }
     
     .activities-box
@@ -787,12 +788,12 @@ footer a:hover
         height:135px;
     }
 
-    .activities_result h4 
+    .activities-result h4 
     {
         padding-left: 10px;
     }
 
-    .activities_result
+    .activities-result
     {
         margin-top: 20px;
         width: 343px;
@@ -830,13 +831,13 @@ footer a:hover
         max-height: none;
     }
 
-    .result_main{
+    .result-main{
         width: auto;
         background-color: white;
         margin: auto;
     }
 
-    .result_main h2{
+    .result-main h2{
         padding-left: 100px;
     }
     .resultcontainer
@@ -856,7 +857,7 @@ footer a:hover
     {
         padding-left: 60px;
     }
-    .submit_button
+    .submit-button
     {
         display: none;
     }
@@ -876,7 +877,7 @@ footer a:hover
 
     /*filter box mini*/
 
-    .filter_box{
+    .filter-box{
         display: grid;
         flex-wrap: wrap;
         align-content: space-around;
@@ -894,6 +895,7 @@ footer a:hover
     .popularcontainer
     {
         margin-top: 40px;
+        width: 100%;
     }
 
     /*Activities mini*/
@@ -901,7 +903,6 @@ footer a:hover
     .activities
     {
         display: flex;
-        justify-self: center;
         flex-direction: column;
         width: auto;
         margin-top: 880px;
