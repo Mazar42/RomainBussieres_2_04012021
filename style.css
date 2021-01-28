@@ -282,7 +282,7 @@ header p strong{
  .imgresult
  {
      overflow: hidden;
-     height: 110px;
+     height: 117px;
      border-top-left-radius: 20px;
      border-top-right-radius: 20px;
  }
@@ -321,7 +321,7 @@ header p strong{
 .result p
 {
     padding-left: 12px;
-    padding-bottom: 3px;
+    padding-bottom: 7px;
     margin-bottom: 0px;
     margin-top: 0px;
 }
@@ -329,8 +329,12 @@ header p strong{
 .result .stars 
 {
     padding-left: 12px;
-    margin-top: 31px;
     color: #0065FC;
+}
+
+.popinfo .stars
+{
+    padding-top: 16px;
 }
 
 .result .stars .greystar
@@ -447,11 +451,15 @@ header p strong{
 .resultpop p
 {
     padding-left: 12px;
-    padding-bottom: 3px;
+    padding-bottom: 50px;
     margin-bottom: 0px;
     margin-top: 0px;
 }
 
+.pop2 p
+{
+    padding-bottom: 75px;
+}
 .resultpop h4
 {
     padding-left: 12px;
