@@ -130,7 +130,6 @@ header p strong{
     color: white;
     background-color: #0065FC;
     padding: 15px;
-    margin-left: none;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
     border-style: none;
@@ -386,8 +385,6 @@ header p strong{
 {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    max-height: auto;
 }
 
 .resultpop
@@ -610,6 +607,11 @@ footer a
 footer a:hover
 {
     color: #0065FC;
+}
+
+footer div a
+{
+    padding-bottom: 10px;
 }
 
 /* //// Smallscreens rules ////*/
