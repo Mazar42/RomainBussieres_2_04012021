@@ -189,6 +189,10 @@ header p strong{
     padding-right: 20px;
 }
 
+.filter-box label:hover
+{
+    border: none;
+}
 .filter-box b
 {
     padding-left: 10px;
