@@ -87,12 +87,15 @@ nav a
     font-size: 0.9em;
     color: black;
     text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 nav a:hover
 {
     border-top: #0065FC solid;
     padding-top: 20px;
+    
 } 
 
 header p 
@@ -100,6 +103,12 @@ header p
     grid-area: subscribe;
     padding-left: 80px;
 }
+
+header p a{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 header p a:hover
 {
     border-top: #0065FC solid;
@@ -714,23 +723,25 @@ footer div a
         width: auto;
         background-color: white;
         margin: auto;
-        
     }
 
-    .result-main h2
-    {
-        padding-left: 20px;
-    }
+    
     .resultcontainer
     {
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 40px ;
+        margin: 0 auto;
     }
 
     .result
     {
         width: 343px;
+    }
+
+    .linkmore
+    {
+        margin-top: 170px;
     }
 
     /*popular*/
@@ -750,7 +761,8 @@ footer div a
     }
 
     .popularcontainer{
-        align-self: center;
+        width: 100%;
+        border-radius: 0;
         
     }
 
@@ -759,20 +771,18 @@ footer div a
     .activities
     {
         margin-top: 250px;
-        margin-bottom: 250px;
-        padding-left: 30px;
+        width: auto;
     }
     
     .activities-box
     {
+        margin: 0 auto;
         display: grid;
-        grid-template-columns: 1fr 1fr ;
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
         grid-template-areas: 
-        "port calanques" 
-        "pomegues lagarde"
-        "frioul longchamps";
-        padding-left: 40px;
+        "port calanques pomegues" 
+        "lagarde frioul longchamps";
         justify-content: space-between;
     }
 
@@ -785,11 +795,7 @@ footer div a
     {
         margin-top: 0;
     }
-    .activities h2
-    {
-        padding-left: 20px;
-    }
-
+    
     
     .actipic
     {
@@ -810,6 +816,7 @@ footer div a
 
     /*Footer*/
     footer{
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -830,15 +837,18 @@ footer div a
     #accroche
     {
         width: 350px;
-        padding-left: 60px;
-        margin-left: 10%;
+        margin-left: 140px;
     }
     /*result field mini*/
 
+    .block-result .infotext{
+        margin-left: 120px;
+    }
     .search-result{
         display: flex;
         flex-direction: column-reverse;
         max-height: none;
+        margin: 0 auto;
     }
 
     .result-main{
@@ -859,14 +869,14 @@ footer div a
 
     .linkmore{
         padding-left: 105px;
-        margin-top: -25px;
+        margin-top: -5px;
     }
     /*search field mini*/
 
     form 
     {
         padding-left: 60px;
-        margin-left: 8%;
+        margin-left: 70px;
     }
     .submit-button
     {
@@ -902,10 +912,6 @@ footer div a
         "animaux animaux";
     }
 
-    .block-result p
-    {
-        margin-left: 10%;
-    }
     /*popular mini*/
 
     .popularcontainer
@@ -923,17 +929,17 @@ footer div a
         width: auto;
         margin-top: 880px;
         margin-bottom: 880px;
-        margin-left: 10%;
     }
 
-    .activities h2{
-        padding-left: 40px;
+    .activities h2
+    {
+        margin-left: 120px;
     }
+
 
     .activities-box
     {
         display: grid;
-        column-gap: 20px;
         grid-template-columns: 1fr ;
         grid-template-rows: repeat(6, 1fr);
         grid-template-areas: 
