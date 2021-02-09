@@ -841,12 +841,12 @@ footer div a
     #accroche
     {
         width: 350px;
-        margin-left: 140px;
+        margin-left: 10px;
     }
     /*result field mini*/
 
     .block-result .infotext{
-        margin-left: 120px;
+        margin-left: 10px;
     }
     .search-result{
         display: flex;
@@ -859,28 +859,29 @@ footer div a
         width: auto;
         background-color: white;
         margin: auto;
+        padding-left: 0px;
     }
 
     .result-main h2{
-        padding-left: 100px;
+        padding-left: 0px;
     }
     .resultcontainer
     {
         display: flex;
         flex-wrap: wrap;
         max-height: none;
+        padding-left: 0px;
     }
 
     .linkmore{
-        padding-left: 105px;
+        padding-left: 10px;
         margin-top: -5px;
     }
     /*search field mini*/
 
     form 
     {
-        padding-left: 60px;
-        margin-left: 70px;
+        margin-left: 10px;
     }
     .submit-button
     {
@@ -916,13 +917,33 @@ footer div a
         "animaux animaux";
     }
 
+    .custom-box{
+        height: 45px;
+    }
+
+    .eco{
+        margin-right: 10px;
+        display: flex;
+    }
+
+    .eco b 
+    {
+        padding-top: 12px;
+    }
+
     /*popular mini*/
 
     .popularcontainer
     {
-        margin-top: 40px;
+        margin-top: 10px;
         width: 100%;
     }
+
+    .resultcontainerpop{
+        padding-left: 0px;
+    }
+
+    
 
     /*Activities mini*/
 
@@ -937,7 +958,7 @@ footer div a
 
     .activities h2
     {
-        margin-left: 120px;
+        margin-left: 10px;
     }
 
 
@@ -953,5 +974,9 @@ footer div a
         "calanques"
         "lagarde"
         "longchamps";
+    }
+
+    footer{
+        padding-left: 0px;
     }
 }
