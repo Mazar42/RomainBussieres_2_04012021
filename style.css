@@ -661,6 +661,7 @@ footer div a
     {
         display: flex;
         border-bottom: solid #F2F2F2;
+        padding-right: 0;
     }
 
     nav ul 
@@ -743,6 +744,7 @@ footer div a
         grid-template-columns: 1fr 1fr;
         column-gap: 40px ;
         margin: 0 auto;
+        padding-right: 0;
     }
 
     .result
@@ -844,12 +846,16 @@ footer div a
 
 /*small responsive*/
 
-@media all and (max-width : 850px)
+@media all and (max-width : 1100px)
 {
     #accroche
     {
         width: 350px;
         margin-left: 10px;
+    }
+
+    nav{
+        padding-right: 30px;
     }
     /*result field mini*/
 
