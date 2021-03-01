@@ -996,3 +996,17 @@ footer div a
         width: 100%;
     }
 }
+
+@media all and (max-width : 350px){
+    .filter-box .familial{
+        width: 120px;
+    }
+
+    .popularcontainer{
+        width: 360px;
+    }
+
+    footer{
+        width: 360px;
+    }
+}
